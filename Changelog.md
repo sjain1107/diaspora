@@ -10,6 +10,7 @@
 * Convert all ActivityStreams::Photo to StatusMessages and drop ActivityStreams::Photo [#4144](https://github.com/diaspora/diaspora/issues/4144)
 * Port the Rails application to strong_parameters in preparation to the upgrade to Rails 4 [#4143](https://github.com/diaspora/diaspora/issues/4143)
 * Refactor left bar side menu, improve tag autosuggestion design [#4271](https://github.com/diaspora/diaspora/issues/4271), [#4316](https://github.com/diaspora/diaspora/pull/4316)
+* Extract and factorize the header css in a new file, fix ugly header in registration [#4389](https://github.com/diaspora/diaspora/pull/4389)
 
 ## Bug fixes
 * Check twitter write access before adding/authorizing it for a user. [#4124](https://github.com/diaspora/diaspora/issues/4124)
@@ -33,6 +34,7 @@
 * Descending text is no longer cut off in orange welcome banner [#4377](https://github.com/diaspora/diaspora/issues/4377)
 * Adjust Facebook character limit to reality [#4380](https://github.com/diaspora/diaspora/issues/4380)
 * Restore truncated URLs when posting to Twitter [#4211](https://github.com/diaspora/diaspora/issues/4211)
+* Fix mobile search tags [#4392](https://github.com/diaspora/diaspora/issues/4392)
 
 ## Features
 * Admin: add option to find users under 13 (COPPA) [#4252](https://github.com/diaspora/diaspora/pull/4252)
@@ -46,6 +48,7 @@
 * Added Wordpress service ability for posts. [#4321](https://github.com/diaspora/diaspora/pull/4321)
 * Implement tag search autocomplete in header search box [#4169](https://github.com/diaspora/diaspora/issues/4169)
 * Uncheck 'make contacts visible to each other' by default when adding new aspect. [#4343](https://github.com/diaspora/diaspora/issues/4343)
+* Add possibility to ask for Bitcoin donations [#4375](https://github.com/diaspora/diaspora/pull/4375)
 
 
 # 0.1.1.0

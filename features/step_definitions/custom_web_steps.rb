@@ -304,3 +304,15 @@ end
 When /^I take the screenshots while logged in$/ do
   take_screenshots_with_login
 end
+
+When /^I focus the "([^"]+)" field$/ do |field|
+  find_field(field).click
+end
+
+Given /^I have configured a Bitcoin wallet$/ do
+  AppConfig.settings.bitcoin_wallet_id = "AAAAAA"
+end
+
+Then /^I should see the Bitcoin wallet ID$/ do
+  find("#bitcoin_address")['value'].should == "AAAAAA"
+end
