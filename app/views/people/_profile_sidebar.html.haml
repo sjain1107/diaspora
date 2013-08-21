@@ -15,9 +15,20 @@
         = link_to t('people.show.mention'), new_status_message_path(:person_id => @person.id), :class => 'button', :rel => 'facebox'
         - if @contact.mutual?
           = link_to t('people.show.message'), new_conversation_path(:contact_id => @contact.id, :name => @contact.person.name), :class => 'button', :rel => 'facebox'
-          
-      = link_to "#", :class => "block_user", :rel => "nofollow", :title => "ignore" do
+        
+            
+      = link_to "#", :class => "block_user", :rel => "nofollow", :title => "ignore", :id => "block_user", :data =>  { :person_id => @person.id } do
         .icons-ignoreuser.control_icon
+        :javascript
+          $(document).ready(function() {
+            $("#block_user").click(function(evt) {
+              if(evt) { evt.preventDefault(); }
+                if(!confirm(Diaspora.I18n.t('ignore_user'))) { return }
+                  
+                })
+              }
+            })
+          });
 
       %br
       %br
